@@ -12,7 +12,7 @@ To build the project for active development and live reloading run...
 
 `npm run dev` and visit http://localhost:1234
 
-# Build for Production
+## Build for Production
 
 To build a production version of the application run...
 
