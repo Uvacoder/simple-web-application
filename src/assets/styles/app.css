@@ -1,0 +1,134 @@
+@import 'normalize.css';
+
+html {
+    box-sizing: border-box;
+    scroll-snap-type: y proximity;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+    color: inherit;
+    font: inherit;
+}
+
+input,
+textarea,
+button {
+    border: 1px solid grey;
+}
+
+button {
+    padding: 0.25em 1em;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.bg-light {
+	background-color: #fbfcf7
+}
+
+.bg-dark {
+	background-color: #e9ebde
+}
+
+.cursor-pointer {
+	cursor: pointer
+}
+
+.no-scroll {
+	overflow-y: hidden
+}
+
+.fade-enter-active {
+    transition: all 0.5s ease-out
+}
+.fade-leave-active {
+    transition: all .2s ease-out
+}
+.fade-medium-enter-active {
+    transition: all 1s ease-out
+}
+.fade-medium-leave-active {
+    transition: all .2s ease-out
+}
+.fade-long-enter-active {
+    transition: all 3s ease-out
+}
+.fade-long-leave-active {
+    transition: all .2s ease-out
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    transform: translateY(-7px)
+}
+.fade-medium-enter,
+.fade-medium-leave-to {
+    opacity: 0;
+    transform: translateY(-10px)
+}
+.fade-long-enter,
+.fade-long-leave-to {
+    opacity: 0;
+    transform: translateY(-14px)
+}
+
+*:focus {outline:none !important}
+
+::selection{
+    background-color: #e9ebde !important;
+    color: #fff !important;
+}
+
+.snap-scroll {
+    scroll-snap-align: center;
+}
+
+.header-padding {
+    padding-top: 120px;
+}
