@@ -14,7 +14,6 @@
     <transition name="slide-down">
         <!-- <headroom> -->
             <div class="banner">
-                <Logo/>
                 <nav>
                     <transition name="entry-very-slow">
                         <router-link v-show="active" class="capitalised" to="/">Home</router-link>

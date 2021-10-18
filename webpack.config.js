@@ -3,10 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
-const {
-    CleanWebpackPlugin
-} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
     const MODE = argv.mode;
@@ -91,7 +88,100 @@ module.exports = (env, argv) => {
                 publicPath: '/'
             }),
             new MiniCssExtractPlugin(),
-            new CleanWebpackPlugin(),
+            new CleanWebpackPlugin()
         ],
     };
 };
+
+
+
+
+
+
+
+
+
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const { VueLoaderPlugin } = require("vue-loader");
+// const autoprefixer = require("autoprefixer");
+
+
+// const path = require('path');
+
+// module.exports = {
+//     target: "web",
+//     entry: './src/main.js',
+//     output: {
+//         path: path.join(__dirname, 'dist'),
+//         filename: '[name].bundle.js',
+//         publicPath: '/'
+//     },
+//     module: {
+//         rules: [
+//             {
+//                 test: /\.js$/,
+//                 exclude: /node_modules/,
+//                 use: {
+//                     loader: "babel-loader",
+//                 },
+//             },
+//             {
+//                 test: /\.vue$/,
+//                 loader: "vue-loader",
+//             },
+//             {
+//                 test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
+//                 loader: "file-loader",
+//                 options: {
+//                   name: "[name][contenthash:8].[ext]",
+//                 },
+//             },
+//             {
+//                 test: /\.(png|jpe?g|gif|webm|mp4|svg)$/,
+//                 loader: "file-loader",
+//                 options: {
+//                   outputPath: "assets",
+//                   esModule: false,
+//                 },
+//             },  
+//             {
+//                 test: /\.s?css$/,
+//                 use: [
+//                   "style-loader",
+//                   MiniCssExtractPlugin.loader,
+//                   "css-loader",
+//                   {
+//                     loader: "postcss-loader",
+//                     options: {
+//                       plugins: () => [autoprefixer()],
+//                     },
+//                   },
+//                   "sass-loader",
+//                 ],
+//             }
+//         ],
+//     },
+//     plugins: [
+//         new VueLoaderPlugin(),
+//         new MiniCssExtractPlugin(),
+//         new CleanWebpackPlugin(),
+//         new HtmlWebpackPlugin({
+//             template: path.resolve(__dirname, "public", "index.html"),
+//             // favicon: "./public/favicon.ico",
+//         }),
+//     ],
+//     resolve: {
+//         alias: {
+//             vue$: "vue/dist/vue.runtime.esm.js",
+//         },
+//         extensions: ["*", ".js", ".vue", ".json"],
+//     },
+//     stats: 'errors-only',
+//     devtool: 'inline-source-map',
+//     optimization: {
+//         minimizer: [new UglifyJsPlugin()],
+//     },
+// }
